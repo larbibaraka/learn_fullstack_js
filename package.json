@@ -4,8 +4,8 @@
   "description": "description: my first implementation of a MERN project following the tut of samer buna at lynda",
   "main": "index.js",
   "scripts": {
-    "start" : "nodemon --exec babel-node server.js --ignore public/",
-    "dev"   : "webpack -wd"
+    "start": "nodemon --exec babel-node server.js --ignore public/",
+    "dev": "webpack -wd"
   },
   "keywords": [
     "mern-stack",
@@ -14,6 +14,7 @@
   "author": "larbi baraka , laridev",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
     "mongodb": "^3.1.10",
     "react": "^16.7.0",
