@@ -6,8 +6,10 @@ class App extends Component {
 
   constructor(props){
     super(props);
+
+    console.log('tgtg ',props.initialContests);
     this.state = {
-      contests : []
+      contests : props.initialContests
     };
   }
 
@@ -18,20 +20,19 @@ class App extends Component {
     .then((res)=>res.json())
     .then((data)=>{
       this.setState({
-        contests : data.data
+        contests : data
       });
     });
   }
   
   
   render() {
-     
     return (
       <div>
         <h1 className="text-center text-info">contest names</h1>
         <hr/>
         <div>
-        {this.state.contests.map((contest, index)=>{
+        {this.state.contests.data.map((contest, index)=>{
           return(
               <ContestPreview contest={contest} key={index}/>
           );

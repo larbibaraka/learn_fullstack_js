@@ -9,16 +9,22 @@ const server = express();
 server.use('/api', ApiRouter);
 //using ejs as a template engine
 server.set('view engine' , 'ejs');
-
+//get the data from server and render it by the server
+import serverRender from './serverRender';
 server.get('/', (req, res)=>{
-  res.render('index' , {
-    content : 'assalam alykoum welcome to my page'
-  });
+  serverRender()
+    .then(content=>{
+      res.render('index' , {
+        content
+      });
+    })
+    .catch(console.error);
+ 
 });
 //serving the static files like css , images ...etc
 server.use(express.static('public'));
 
-server.listen(config.port, ()=>{
+server.listen(config.port,config.host, ()=>{
   console.log('hello this is working on port ', config.port );
 });
 
