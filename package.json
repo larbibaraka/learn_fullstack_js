@@ -1,0 +1,34 @@
+{
+  "name": "learn_full_stack_js",
+  "version": "1.0.0",
+  "description": "description: my first implementation of a MERN project following the tut of samer buna at lynda",
+  "main": "index.js",
+  "scripts": {
+    "start" : "nodemon --exec babel-node server.js --ignore public/",
+    "dev"   : "webpack -wd"
+  },
+  "keywords": [
+    "mern-stack",
+    "react-fullstack"
+  ],
+  "author": "larbi baraka , laridev",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongodb": "^3.1.10",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^5.11.1",
+    "eslint-plugin-react": "^7.12.0",
+    "nodemon": "^1.18.9",
+    "webpack": "^4.28.2"
+  }
+}
